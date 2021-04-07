@@ -28,6 +28,8 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 # Add luci-app-dnsfilter 
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter 
 
+git clone --depth=1 https://github.com/yichya/luci-app-xray.git
+
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
