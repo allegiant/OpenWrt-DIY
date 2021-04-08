@@ -28,14 +28,16 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 # Add luci-app-dnsfilter 
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter 
 
+# Add luci-app-xray
+git clone --depth=1 https://github.com.cnpmjs.org/yichya/openwrt-xray.git
 git clone --depth=1 https://github.com/yichya/luci-app-xray.git
 
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-vssr <M>
-#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-#git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add mentohust & luci-app-mentohust
 git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
@@ -93,10 +95,10 @@ sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-s
 popd
 
 # Use Lienol's https-dns-proxy package
-pushd feeds/packages/net
-rm -rf https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-popd
+#pushd feeds/packages/net
+#rm -rf https-dns-proxy
+#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+#popd
 
 # Use snapshots' syncthing package
 pushd feeds/packages/utils
