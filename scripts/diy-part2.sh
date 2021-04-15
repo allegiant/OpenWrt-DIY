@@ -29,8 +29,8 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 #git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter 
 
 # Add luci-app-xray
-git clone --depth=1 https://github.com.cnpmjs.org/yichya/openwrt-xray.git
-git clone --depth=1 https://github.com/yichya/luci-app-xray.git
+# git clone --depth=1 https://github.com.cnpmjs.org/yichya/openwrt-xray.git
+# git clone --depth=1 https://github.com/yichya/luci-app-xray.git
 
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
