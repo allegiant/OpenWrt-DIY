@@ -108,6 +108,8 @@ popd
 # Change default shell to zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
-sed -i '68s/89/93/' openwrt/target/linux/ramips/patches-4.14/102-mt7621-fix-cpu-clk-add-clkdev.patch
-sed -i '113s/bus_clk/bus_clk,i/' openwrt/target/linux/ramips/patches-4.14/102-mt7621-fix-cpu-clk-add-clkdev.patch
-sed -i 'N;156 a +\               pll &= ~(0x7ff);\n+\               pll |=  (0x362);\n+\               rt_memc_w32(pll,MEMC_REG_CPU_PLL);\n+\               for(i=0;i<1024;i++);' openwrt/target/linux/ramips/patches-4.14/102-mt7621-fix-cpu-clk-add-clkdev.patch
+pushd target/linux/ramips/patches-4.14
+sed -i '68s/89/93/' 102-mt7621-fix-cpu-clk-add-clkdev.patch
+sed -i '113s/bus_clk/bus_clk,i/' 102-mt7621-fix-cpu-clk-add-clkdev.patch
+sed -i 'N;156 a +\               pll &= ~(0x7ff);\n+\               pll |=  (0x362);\n+\               rt_memc_w32(pll,MEMC_REG_CPU_PLL);\n+\               for(i=0;i<1024;i++);' 102-mt7621-fix-cpu-clk-add-clkdev.patch
+popd
